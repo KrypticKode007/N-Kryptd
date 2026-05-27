@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Krypticsoundz - Artist Profile & Music Portfolio">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>Krypticsoundz - Artist Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Krypticsoundz</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#music" class="nav-link">Music</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Krypticsoundz</h1>
+                <p class="hero-subtitle">Contemporary Music Artist</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('music').scrollIntoView({behavior: 'smooth'})">Explore Music</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-element"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About the Artist</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Krypticsoundz is a contemporary music artist known for creating innovative and atmospheric soundscapes. With a focus on production quality and artistic expression, the work spans multiple genres and influences.</p>
+                    <p>The artist's approach combines modern production techniques with thoughtful composition, creating pieces that resonate with listeners seeking depth and authenticity in music.</p>
+                    <p>Available on major streaming platforms including Spotify, where listeners can explore the full discography and discover new releases.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>Releases</h3>
+                        <p>Multiple Projects</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Platforms</h3>
+                        <p>Spotify, Apple Music, YouTube</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Genre</h3>
+                        <p>Contemporary / Electronic</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="music">
+        <div class="container">
+            <h2 class="section-title">Featured Track</h2>
+            <div class="music-player">
+                <div class="player-controls">
+                    <button class="player-btn" id="playBtn">
+                        <span class="play-icon">▶</span>
+                    </button>
+                    <div class="player-info">
+                        <h3 id="trackTitle">Piece of You</h3>
+                        <p id="trackArtist">Krypticsoundz</p>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <input type="range" class="progress-slider" id="progressSlider" min="0" max="100" value="0">
+                </div>
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+                <div class="player-volume">
+                    <span>🔊</span>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+                </div>
+                <audio id="audioPlayer"></audio>
+            </div>
+            <div class="streaming-links">
+                <a href="https://open.spotify.com" class="stream-btn spotify" target="_blank">Spotify</a>
+                <a href="https://music.apple.com" class="stream-btn apple" target="_blank">Apple Music</a>
+                <a href="https://www.youtube.com" class="stream-btn youtube" target="_blank">YouTube</a>
+                <a href="https://soundcloud.com" class="stream-btn soundcloud" target="_blank">SoundCloud</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Krypticsoundz. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://spotify.com" target="_blank">Spotify</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
